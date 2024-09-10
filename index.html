@@ -1,167 +1,310 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css" />
-    <title>Document</title>
-    <style>
-        body {
-            font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
-            text-align: center;
-            background-color: rgb(119, 0, 255);
-        }
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="style.css" />
+        <title>G'ofurjon</title>
+        <style>
+            body {
+                font-family: "Gill Sans", "Gill Sans MT", Calibri,
+                    "Trebuchet MS", sans-serif;
+                text-align: center;
+                background-color: #d1d1d1;
+                margin: 0;
+                padding: 0;
+            }
 
-        img {
-            width: 200px;
-            border-radius: 100px;
-            box-shadow: 0 0 20px rgb(255, 255, 255);
-            margin-top: 20px;
-        }
+            img {
+                width: 200px;
+                border-radius: 100px;
+                box-shadow: 0 0 20px rgb(255, 255, 255);
+                margin-top: 3px;
+            }
 
-        h1 {
-            font-size: 40px;
-        }
+            h1 {
+                font-size: 40px;
+            }
+            /*buttom*/
+            /* From Uiverse.io by Praashoo7 */
+            .main {
+                display: flex;
+                flex-direction: column;
+                gap: 0.5em;
+                align-items: center; /* Centers items horizontally */
+                height: 100vh; /* Ensures the container takes the full height of the viewport */
+            }
 
-        .btn {
-            margin-top: 10px;
-            margin-bottom: 10px;
-            font-size: 1.2rem;
-            padding: 1rem 2.5rem;
-            border: none;
-            outline: none;
-            border-radius: 0.4rem;
-            cursor: pointer;
-            text-transform: uppercase;
-            background-color: rgb(14, 14, 26);
-            color: rgb(234, 234, 234);
-            font-weight: 700;
-            transition: 0.7s;
-            box-shadow: 0px 0px 60px #1f4c65;
-        }
+            .up {
+                display: flex;
+                flex-direction: row;
+                gap: 0.5em;
+            }
 
-        .btn:active {
-            scale: 0.92;
-            background: rgb(2, 29, 78);
-            background: linear-gradient(
-                270deg,
-                rgba(2, 29, 78, 0.681) 0%,
-                rgba(31, 215, 232, 0.873) 60%
-            );
-            color: rgb(4, 4, 38);
-        }
+            .down {
+                display: flex;
+                flex-direction: row;
+                gap: 0.5em;
+                margin-bottom: 100px;
+            }
 
-        .hidden {
-            opacity: 0;
-            max-height: 0;
-            overflow:visible ;
-            transition: opacity 1s ease, max-height 0.8s ease;
-        }
+            .card1 {
+                width: 90px;
+                height: 90px;
+                outline: none;
+                border: none;
+                background: white;
+                border-radius: 90px 5px 5px 5px;
+                box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
+                    rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+                transition: 0.2s ease-in-out;
+            }
 
-        .visible {
-            opacity: 1;
-            max-height: 200px;
-        }
+            .instagram {
+                margin-top: 1.5em;
+                margin-left: 1.2em;
+                fill: #cc39a4;
+            }
 
-        div {
-            text-align: left;
-            width: 250px;
-            border-radius: 15px;
-            margin: 10px auto;
-            display: block;
-            border: 2px solid rgb(153, 29, 29);
-            background-color: rgba(240, 248, 255, 0.856);
-            transition: opacity 0.5s ease, max-height 0.5s ease;
-        }
+            .card2 {
+                width: 90px;
+                height: 90px;
+                outline: none;
+                border: none;
+                background: white;
+                border-radius: 5px 90px 5px 5px;
+                box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
+                    rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+                transition: 0.2s ease-in-out;
+            }
 
-        i {
-            font-size: 45px;
-            margin: 5px;
-            text-align: center;
-            padding: 2px;
-            padding-bottom: -10px;
-        }
+            .teligtam {
+                margin-top: 1.5em;
+                margin-left: -0.9em;
+                fill: #03a9f4;
+            }
 
-        a {
-            text-decoration: none;
-            color: rgb(0, 0, 0);
-            font-size: 22px;
-            margin-left: 10px;
+            .card3 {
+                width: 90px;
+                height: 90px;
+                outline: none;
+                border: none;
+                background: white;
+                border-radius: 5px 5px 5px 90px;
+                box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
+                    rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+                transition: 0.2s ease-in-out;
+            }
 
-        }
+            .nomer {
+                margin-top: -0.6em;
+                margin-left: 1.2em;
+            }
 
-        .gmail {
-            color: rgb(255, 174, 0);
-        }
+            .card4 {
+                width: 90px;
+                height: 90px;
+                outline: none;
+                border: none;
+                background: white;
+                border-radius: 5px 5px 90px 5px;
+                box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
+                    rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+                transition: 0.2s ease-in-out;
+            }
 
-        .github {
-            color: rgb(0, 0, 0);
-        }
+            .znomer {
+                margin-top: -0.9em;
+                margin-left: -1.2em;
+                fill: #8c9eff;
+            }
 
-        .teligram {
-            color: rgb(0, 132, 255);
-        }
+            .card1:active {
+                cursor: pointer;
+                scale: 1.1;
+                background-color: #ff0000;
+            }
 
-        .instagram {
-            color: rgb(255, 0, 85);
-        }
+            .card1:active .instagram {
+                fill: white;
+            }
 
-        .facebook {
-            color: rgb(49, 49, 245);
-        }
+            .card2:active {
+                cursor: pointer;
+                scale: 1.1;
+                background-color: #03a9f4;
+            }
 
-        .nomer {
-            color: rgb(76, 189, 76);
-        }
+            .card2:active .teligtam {
+                fill: white;
+            }
 
-        .zahira {
-            color: rgba(0, 255, 0, 0.438);
-        }
-    </style>
-</head>
-<body>
-    <img src="./photo_2024-07-19_13-41-04.jpg" />
-    <h1>Soliyev G'ofurjon</h1>
-    <hr />
-    <button class="btn" onclick="toggleDivs()">Bog'lanish</button>
-    <div class="gmail hidden">
-        <i class="fa-regular fa-envelope"></i>
-        <a href="https://mailto:soliyevgofurjon7@gmail.com">Gmail</a>
-    </div>
-    <div class="github hidden">
-        <i class="fa-brands fa-github"></i>
-        <a href="https://github.com/gafurbey"> <samp>GitHub</samp></a>
-    </div>
-    <div class="teligram hidden">
-        <i class="fa-brands fa-telegram"></i>
-        <a href="https://t.me/Mister_X_1101">Telegram</a>
-    </div>
-    <div class="instagram hidden">
-        <i class="fa-brands fa-instagram"></i>
-        <a href="https://www.instagram.com/gafurbey_001/#">Instagram</a>
-    </div>
-    <div class="facebook hidden">
-        <i class="fa-brands fa-facebook"></i>
-        <a href="">Facebook</a>
-    </div>
-    <div class="nomer hidden">
-        <i class="fa-solid fa-phone-volume"></i>
-        <a href="+998991771242"> Telefon</a>
-    </div>
-    <div class="zahira hidden">
-        <i class="fa-solid fa-phone"></i>
-        <a href="+998930017420"> Zaxira telefon</a>
-    </div>
-    <script src="https://kit.fontawesome.com/ebfce19c06.js"></script>
-    <script>
-        function toggleDivs() {
-            const divs = document.querySelectorAll('div');
-            divs.forEach(div => {
-                div.classList.toggle('hidden');
-                div.classList.toggle('visible');
-            });
-        }
-    </script>
-</body>
+            .card3:active {
+                cursor: pointer;
+                scale: 1.1;
+                background-color: rgb(37, 163, 47);
+            }
+
+            .card3:active .nomer {
+                fill: white;
+            }
+
+            .card4:active {
+                cursor: pointer;
+                scale: 1.1;
+                background-color: rgb(37, 163, 47);
+            }
+
+            .card4:active .znomer {
+                fill: white;
+            }
+            /* From Uiverse.io by xXJollyHAKERXx */
+            .spinner {
+                background-image: linear-gradient(
+                    rgb(186, 66, 255) 35%,
+                    rgb(0, 225, 255)
+                );
+                width: 206px;
+                height: 206px;
+                animation: spinning82341 1.7s linear infinite;
+                border-radius: 100%;
+                filter: blur(1px);
+                box-shadow: 0px -5px 20px 0px rgb(186, 66, 255),
+                    0px 5px 20px 0px rgb(0, 225, 255);
+            }
+
+            @keyframes spinning82341 {
+                to {
+                    transform: rotate(360deg);
+                }
+            }
+            .container {
+                margin-top: 30px;
+                display: flex;
+                justify-content: center; /* Gorizontal markazlash */
+            }
+            .card1 i {
+                font-size: 30px;
+                margin-left: 15px;
+                margin-top: 15px;
+                color: #ff0000;
+            }
+            .card2 i {
+                font-size: 27px;
+                margin-left: -8px;
+                margin-top: 15px;
+                color: #03a9f4;
+            }
+            .card3 i {
+                font-size: 32px;
+                margin-left: 15px;
+                margin-top: -15px;
+                color: rgb(0, 255, 21);
+            }
+            .card4 i {
+                font-size: 28px;
+                margin-left: -10px;
+                margin-top: -15px;
+                color: rgb(13, 173, 26);
+            }
+            /* From Uiverse.io by G4b413l */
+            .ball {
+                position: relative;
+                bottom: 50px;
+                left: calc(100% - 20px);
+                width: 50px;
+                height: 50px;
+                background: #fff;
+                border-radius: 50%;
+                animation: ball-move8234 3s ease-in-out 1s infinite alternate;
+            }
+
+            .ball::after {
+                position: absolute;
+                content: "";
+                top: 25px;
+                right: 5px;
+                width: 5px;
+                height: 5px;
+                background: #000;
+                border-radius: 50%;
+            }
+
+            .bar {
+                width: 200px;
+                height: 12.5px;
+                background: #ff8800;
+                border-radius: 10px;
+                border-radius: 30px;
+                transform: rotate(-15deg);
+                animation: up-down6123 3s ease-in-out 1s infinite alternate;
+            }
+
+            @keyframes up-down6123 {
+                from {
+                    transform: rotate(-15deg);
+                }
+
+                to {
+                    transform: rotate(15deg);
+                }
+            }
+
+            @keyframes ball-move8234 {
+                from {
+                    left: calc(100% - 40px);
+                    transform: rotate(360deg);
+                }
+
+                to {
+                    left: calc(0% - 20px);
+                    transform: rotate(0deg);
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <div class="spinner">
+                <img src="./rasm.jpg" alt="" />
+            </div>
+        </div>
+
+        <h1>Soliyev G'ofurjon</h1>
+
+        <div class="main">
+            <div class="up">
+                <button
+                    class="card1"
+                    onclick="window.location.href='https://www.instagram.com/injiner_010/#'"
+                >
+                    <i class="fa-brands fa-instagram"></i>
+                </button>
+                <button
+                    class="card2"
+                    onclick="window.location.href='https://t.me/s_gofur'"
+                >
+                    <i class="fa-regular fa-paper-plane"></i>
+                </button>
+            </div>
+            <div class="down">
+                <button
+                    class="card3"
+                    onclick="window.location.href='https://wa.me/998991771242'"
+                >
+                    <i class="fa-brands fa-whatsapp"></i>
+                </button>
+                <button
+                    class="card4"
+                    onclick="window.location.href='tel:+998930017420'"
+                >
+                <i class="fa-solid fa-mobile-screen"></i>
+                </button>
+            </div>
+            <div class="bar">
+                <div class="ball"></div>
+            </div>
+        </div>
+        <script src="https://kit.fontawesome.com/ebfce19c06.js"></script>
+    </body>
 </html>
-
